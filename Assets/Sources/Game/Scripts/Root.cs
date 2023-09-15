@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using Sources.Modules.Player.Scripts;
+using Sources.Modules.PlayerFactory.Scripts;
 using UnityEngine;
 
-public class Root : MonoBehaviour
+namespace Sources.Game.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Root : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private PlayerRoot _playerRoot;
+        [SerializeField] private PlayerFactory _playerFactory;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Awake()
+        {
+            _playerRoot.Disable();
+            _playerFactory.Init(_playerRoot);
+        }
     }
 }
