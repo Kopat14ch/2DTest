@@ -1,3 +1,4 @@
+using Sources.Modules.Player.ScriptableObjects;
 using UnityEngine;
 
 namespace Sources.Modules.Player.Scripts

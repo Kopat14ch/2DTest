@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad028b6b8dd485ebffcdee463295a61, type: 3}
+  m_Name: DeagleConfig
+  m_EditorClassIdentifier: 
+  <BulletSpeed>k__BackingField: 10
+  <TimeToDestroyBullet>k__BackingField: 2
+  <MaxCurrentBullets>k__BackingField: 30
+  <Gun>k__BackingField: {fileID: 7791226228980519309, guid: 86dba77e68d13c14f8cd4108c2ba259e, type: 3}
+  <WeaponRoot>k__BackingField: {fileID: 8911737856282983331, guid: 86dba77e68d13c14f8cd4108c2ba259e, type: 3}
+  <Bullet>k__BackingField: {fileID: 411005574445861292, guid: 0a564b77c8cac2442a755cb71336ed03, type: 3}

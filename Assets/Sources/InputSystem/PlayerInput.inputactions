@@ -24,9 +24,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Drop",
+                    "name": "Shoot",
                     "type": "Button",
-                    "id": "1bb0d6de-af37-4afb-bfc8-10eb88f707f1",
+                    "id": "02e02243-cf63-4b28-b7b4-b1b0262f2a9f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -80,12 +80,12 @@
                 },
                 {
                     "name": "",
-                    "id": "1eae4095-7d77-437a-ac2a-adac5d13aff1",
-                    "path": "<Keyboard>/s",
+                    "id": "c090bc37-82da-4df9-a1b5-0963d93ae246",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Mouse+Keyboard",
-                    "action": "Drop",
+                    "groups": "",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
