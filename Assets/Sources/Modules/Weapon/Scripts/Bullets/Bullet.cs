@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Sources.Modules.Common;
 using UnityEngine;
 
 namespace Sources.Modules.Weapon.Scripts.Bullets
@@ -21,7 +22,7 @@ namespace Sources.Modules.Weapon.Scripts.Bullets
         private async void OnEnable()
         {
             _transform.rotation = Quaternion.Euler(0,0, _gunTransform.rotation.eulerAngles.z - StartRotateZ);
-            Vector2 gunDirection = new Vector2(_gunTransform.right.x, _gunTransform.right.y);
+            Vector2 gunDirection = _gunTransform.right;
             
             _rigidbody2D.velocity = gunDirection.normalized * _speed;
             
@@ -37,7 +38,13 @@ namespace Sources.Modules.Weapon.Scripts.Bullets
         }
         
         private void OnDestroy() => _tokenSource.Cancel();
-        
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.TryGetComponent(out Obstacle _))
+                Disable();
+        }
+
         public void Init(float speed, float timeSecondsToDisable, Transform gunTransform)
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -53,11 +60,5 @@ namespace Sources.Modules.Weapon.Scripts.Bullets
         public void Disable() => gameObject.SetActive(false);
         
         public void SetPosition(Vector3 position) => _transform.position = position;
-
-        public void SetRotate(float rotateZ)
-        {
-            Debug.Log($"Rotate - {rotateZ - StartRotateZ}");
-            transform.rotation = Quaternion.Euler(0,0, rotateZ - StartRotateZ);
-        }
     }
 }

@@ -11,10 +11,10 @@ namespace Sources.Modules.Weapon.Scripts
 
         public IShooting Shooting { get; private set; }
 
-        public void Init(WeaponConfig weaponConfig)
+        public void Init(WeaponConfig weaponConfig, Transform playerTransform)
         {
             _gun = GetComponent<Gun>();
-            _gun.Init(weaponConfig.MaxCurrentBullets);
+            _gun.Init(weaponConfig.MaxCurrentBullets, playerTransform);
             
             Shooting = _gun;
             Enable();

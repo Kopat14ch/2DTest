@@ -17,7 +17,7 @@ namespace Sources.Modules.Weapon.Scripts.Factory
             config.WeaponRoot.Disable();
 
             CurrentWeaponRoot = Instantiate(config.WeaponRoot, newPosition, Quaternion.identity, playerTransform);
-            CurrentWeaponRoot.Init(config);
+            CurrentWeaponRoot.Init(config, playerTransform);
             config.WeaponRoot.Enable();
         }
     }
